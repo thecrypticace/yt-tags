@@ -1,0 +1,25 @@
+{
+  "tags": [
+    {
+      "name": "Innovative",
+      "color": "#8888ee",
+      "icon": "cap"
+    },
+    {
+      "name": "Funny",
+      "color": "#c0ff33",
+      "icon": "thumbs-up"
+    },
+    {
+      "name": "Pay Attention",
+      "color": "#deadbe",
+      "icon": "beaker"
+    }
+  ],
+  "channels": {
+    "@PracticalEngineeringChannel": ["Innovative"],
+    "@ProZD": ["Funny"],
+    "@JeffersonLab": ["Pay Attention"]
+  },
+  "videos": {}
+}

@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@types/chrome": "^0.0.263",
+    "bun": "^1.1.0"
+  },
+  "scripts": {
+    "build:client": "bun build --target=browser ./src/client/index.ts --outfile dist/client.js",
+    "build:server": "bun build --target=browser ./src/server/index.ts --outfile dist/server.js",
+    "build": "bun run build:client && bun run build:server"
+  }
+}
