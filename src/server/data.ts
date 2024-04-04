@@ -1,3 +1,5 @@
+declare const browser: typeof import("webextension-polyfill");
+
 import { Tag } from "../common";
 
 export class Data {
@@ -6,7 +8,7 @@ export class Data {
   public videos: Record<string, string[]> = {};
 
   static async load() {
-    const url = chrome.runtime.getURL(`data/tags.json`);
+    const url = browser.runtime.getURL(`data/tags.json`);
     const response = await fetch(url).then((response) => response.json());
 
     let tags: Tag[] = response.tags ?? [];
