@@ -1,9 +1,11 @@
+declare const browser: typeof import("webextension-polyfill");
+
 import type { Tag, Video } from "../common";
 
 export class Tags {
   public async forVideos(videos: Video[]): Promise<Tag[][]> {
     // Ask the extension for tags
-    const response = await chrome.runtime.sendMessage({
+    const response = await browser.runtime.sendMessage({
       kind: "tags:read",
       data: {
         videos,

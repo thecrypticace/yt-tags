@@ -1,11 +1,15 @@
 {
   "devDependencies": {
     "@types/chrome": "^0.0.263",
-    "bun": "^1.1.0"
+    "@types/webextension-polyfill": "^0.10.7",
+    "bun": "^1.1.0",
+    "web-ext": "^7.11.0",
+    "webextension-polyfill": "^0.10.0"
   },
   "scripts": {
     "build:client": "bun build --target=browser ./src/client/index.ts --outfile dist/client.js",
+    "build:events": "bun build --target=browser ./src/events/index.ts --outfile dist/events.js",
     "build:server": "bun build --target=browser ./src/server/index.ts --outfile dist/server.js",
-    "build": "bun run build:client && bun run build:server"
+    "build": "bun run build:client && bun run build:events && bun run build:server"
   }
 }
